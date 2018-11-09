@@ -60,6 +60,22 @@
             
             
         }
+        modifier check_tie()
+        {
+            int count_non = 0;
+            for (int i =0;i<3;i++)
+            {
+                for(int j =0;j<3;j++)
+                {
+                    if (game_state[i][j]!=0)
+                    {
+                        count_non +=1;
+                    }
+                }
+            }
+            require(count_non != 9 , " MATCH TIED/ OVER");_;
+            
+        }
         
         constructor (  )
         {
@@ -86,6 +102,7 @@
         check_valid_xy(x,y)
         check_winner()
         not_organizer()
+        check_tie()
         {
             game_state[x][y] = turn;
 
