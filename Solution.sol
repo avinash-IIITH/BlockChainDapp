@@ -10,7 +10,7 @@
         event Print4(uint val);
      
      
-        // All set by organizer
+        //All set by organizer
         uint participation_fees = 0;
         address organizer_address;
         uint max_num_participant = 0;
